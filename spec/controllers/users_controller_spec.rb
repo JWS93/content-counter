@@ -5,7 +5,7 @@ RSpec.describe UsersController, type: :controller do
 
   describe 'POST /users' do
     it 'create a new user object' do
-      user :create, params: {username: 'test user'}
+      post :create, params: {username: 'test user'}
 
       expect(User.count).to eq(1)
     end
